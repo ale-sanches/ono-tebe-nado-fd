@@ -1,6 +1,7 @@
 .section {
     padding: 0 24px;
 }
+
 .section__title {
     font-weight: 700;
     font-size: 40px;
@@ -10,7 +11,9 @@
 
 .link {
     color: black;
+    text-underline-offset: 3px;
 }
+
 .overlay {
     position: absolute;
     inset: 0;
@@ -19,6 +22,11 @@
     background: #000;
     opacity: 0.6;
     z-index: 0;
+}
+.text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
 }
 
 /* header */
@@ -29,46 +37,55 @@
     font-size: 18px;
     align-items: center;
 }
-.header__menu{
+
+.header__menu {
     padding-bottom: 5px;
 }
 
-.header__menu__list{
+.header__links-list {
     display: flex;
-    gap: 32px;
+    gap: 31px;
 }
-.header__menu__item{
+
+.header__links-list-item {
     list-style: circle;
 }
-.header__menu-item_active{
+
+.header__links-list-item_no-bullit {
     list-style: none;
 }
-.header__menu-item_active .header__menu-link{
+
+.header__link_active {
     text-decoration: none;
 }
 
 
-.logo__link {
+.header__logo {
     display: block;
-     width: 138px;
+    width: 138px;
 }
 
-.logo__link-img {
+.header__logo-image {
     width: 100%;
     padding-bottom: 0;
 }
 
 .address {
-    max-width: 240px;
-    justify-self: end;
     font-style: normal;
     line-height: 135%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
 
 }
 
-.address__link {
-    display: block;
+.header__address {
+    max-width: 240px;
+    justify-self: end;
+    align-items: flex-start;
+
 }
+
 
 /* cover */
 .cover {
@@ -101,22 +118,25 @@
 
 .aligned-text_center {
     text-align: center;
-    margin-right: -0.3em
 }
 
 .aligned-text_right {
     text-align: right;
+}
+
+.no-letter-spacing {
     margin-right: -0.3em
 }
 
-.cover__description{
+.cover__description {
     position: relative;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.cover__description-text{
+
+.cover__description-text {
     font-weight: 400;
     font-size: 22px;
     line-height: 127%;
@@ -126,7 +146,8 @@
     text-wrap: nowrap;
     word-spacing: 19px;
 }
-.bet-button{
+
+.bet-button {
     background-color: transparent;
     border: 1px solid #fff;
     padding: 11px 32px;
@@ -136,28 +157,33 @@
     text-align: center;
     color: #fff;
 }
+
 /*lots*/
-.lots{
+.lots {
     padding-top: 180px;
 }
-.lots__heading{
+
+.lots__heading {
     margin-bottom: 27px;
     margin-left: 40px;
 }
-.lots__card-list{
+
+.lots__card-list {
     display: flex;
     gap: 25px;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
-.lots__card-list-item{
+
+.lots__card-list-item {
     list-style: none;
     width: 334px;
     min-height: 596px;
     position: relative;
     padding: 48px 40px;
 }
-.card{
+
+.card {
     height: 100%;
     position: relative;
     z-index: 1;
@@ -166,46 +192,95 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
 .card_type_film {
     background-image: url(/images/card-lot-01.jpg);
     background-size: cover;
     background-position: center;
     z-index: 1;
 }
+
 .card_type_book {
     background-image: url(/images/card-lot-02.jpg);
     background-size: cover;
     background-position: center;
     z-index: 1;
 }
+
 .card_type_picture {
     background-image: url(/images/card-lot-03.jpg);
     background-size: cover;
     background-position: center;
     z-index: 1;
 }
-.card__title{
+
+.card__title {
     text-decoration: underline;
+    text-underline-offset: 3px;
     font-weight: 700;
     font-size: 22px;
     line-height: 120%;
     text-transform: uppercase;
 }
+
+
 .card-link {
     height: 100%;
     text-decoration: none;
 
 }
-.card__text{
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-}
-.lots__look-more-link{
+
+
+
+.lots__look-more-link {
     font-weight: 400;
     font-size: 20px;
     margin-left: 40px;
+    text-underline-offset: 5px;
 }
-.about{
-    padding-top: 120px;
+
+/*about*/
+.about {
+    margin-top: 120px;
+    display: grid;
+    grid-template-columns: 334px 1fr;
+    gap: 25px;
 }
+
+.about__logo-column{
+    padding-top: 35px;
+}
+
+.about__text-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-top: 135px;
+}
+
+.about__logo {
+    background-color: black;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.about__logo-image {
+    width: 148px;
+}
+
+.about__title {
+    margin-bottom: 100px;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+
