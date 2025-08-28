@@ -251,8 +251,9 @@
 .about__text-column {
     display: flex;
     flex-direction: column;
-    justify-content: end;
     padding-top: 137px;
+    justify-content: space-between;
+    gap: 100px;
 }
 
 .about__logo {
@@ -270,12 +271,6 @@
     width: 148px;
 }
 
-.about__text-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 100px;
-}
 
 
 .about__text {
